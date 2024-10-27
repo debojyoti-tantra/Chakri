@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Application Submitted</title>
+    <style>
+        body {
+            background-color: #e0f7fa;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            height: 100vh;
+            color: #00695c;
+        }
+
+        h1 {
+            color: #004d40;
+        }
+
+        .container {
+            border: 2px solid #004d40;
+            border-radius: 10px;
+            padding: 20px;
+            background-color: #b2dfdb;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            width: 300px;
+            text-align: left;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>Application Submitted</h1>
+    <div class="container">
+        <p><strong>Name:</strong> <%= name %></p>
+        <p><strong>Email:</strong> <%= email %></p>
+        <p><strong>Education:</strong> <%= education %></p>
+        <p><strong>Date of Birth:</strong> <%= dob %></p>
+        <p><strong>Gender:</strong> <%= gender %></p>
+        <p><strong>Marital Status:</strong> <%= maritalStatus %></p>
+        <p><strong>Caste:</strong> <%= caste %></p>
+        <p><strong>District:</strong> <%= district %></p>
+        <p><strong>Years of Experience:</strong> <%= experience %></p>
+    </div>
+</body>
+
+</html>
