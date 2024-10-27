@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Employee Hiring Form</title>
+
+    <style>
+        body {
+            background-color: #caffc4;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+        }
+
+        body h1 {
+            color: #0a5e00;
+        }
+
+        body form {
+            margin: 10px;
+            padding: 10px;
+            border: 2px solid #0a5e00;
+            border-radius: 10px;
+            background-color: #b8ffb0;
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+        }
+
+        button[type="submit"] {
+            background-color: #4CAF50;
+            color: white;
+            border: 2 px solid #0a5e00;
+            padding: 15px 20px;
+            text-align: center;
+            text-decoration: none;
+            display: inline-block;
+            font-size: 16px;
+            margin: 4px 2px;
+            cursor: pointer;
+            border-radius: 5px;
+            transition: background-color 0.3s, transform 0.2s;
+        }
+
+        /* Hover effects */
+        button[type="submit"]:hover {
+            background-color: #45a049;
+            transform: translateY(-2px);
+        }
+
+        /* Active state */
+        button[type="submit"]:active {
+            transform: translateY(1px);
+        }
+    </style>
+
+</head>
+
+<body>
+    <h1>Employee Hiring Form</h1>
+    <form action="/submit" method="POST">
+        <label for="name">Name:
+            <input type="text" id="name" name="name" required>
+        </label>
+
+        <label for="email">Email:
+            <input type="email" id="email" name="email" required>
+        </label>
+
+        <label for="education">Education:
+            <select id="education" name="education" required>
+                <option value="" disabled selected>Select Education Level</option>
+                <option value="secondary">Secondary Education</option>
+                <option value="higher_secondary">Higher Secondary Education</option>
+                <option value="graduate">Graduate</option>
+                <option value="masters">Master's</option>
+                <option value="phd">PhD</option>
+                <option value="postdoc">Post Doctorate</option>
+            </select>
+        </label>
+
+        <label for="dob">Date of Birth:
+            <input type="date" id="dob" name="dob" required>
+        </label>
+
+        <label for="gender">Gender:
+            <select id="gender" name="gender" required>
+                <option value="" disabled selected>Select Gender</option>
+                <option value="male">Male</option>
+                <option value="female">Female</option>
+                <option value="other">Other</option>
+            </select>
+        </label>
+
+        <label for="maritalStatus">Marital Status:
+            <select id="maritalStatus" name="maritalStatus" required>
+                <option value="" disabled selected>Select Marital Status</option>
+                <option value="single">Single</option>
+                <option value="married">Married</option>
+                <option value="divorced">Divorced</option>
+            </select>
+        </label>
+
+        <label for="caste">Caste:
+            <select id="caste" name="caste" required>
+                <option value="" disabled selected>Select Caste</option>
+                <option value="obc_a">OBC-A</option>
+                <option value="obc_b">OBC-B</option>
+                <option value="sc">SC</option>
+                <option value="st">ST</option>
+                <option value="general">General</option>
+            </select>
+        </label>
+
+        <label for="district">District:
+            <input type="text" id="district" name="district" required>
+        </label>
+
+        <label for="experience">Years of Experience:
+            <input type="number" id="experience" name="experience" min="0" required>
+        </label>
+
+        <button type="submit">Submit Application</button>
+    </form>
+</body>
+
+</html>
